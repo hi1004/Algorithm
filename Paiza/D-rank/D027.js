@@ -1,6 +1,5 @@
-// const [n] = require('fs').readFileSync('/dev/stdin', 'utf8').trim().split(' ').map(Number);
+const [n] = require('fs').readFileSync('/dev/stdin', 'utf8').trim().split(' ').map(Number);
 
-const n = 10;
 function solution1() {
   let answer = 0;
   let sum = 1;
