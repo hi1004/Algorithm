@@ -4,4 +4,5 @@ function solution(n, h) {
   const answer = n * h;
   return answer;
 }
+
 console.log(solution(n, h));
