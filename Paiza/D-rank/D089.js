@@ -1,4 +1,8 @@
-const [ns] = require('fs').readFileSync('/dev/stdin').toString().trim().split(' ');
+const [ns] = require('fs')
+  .readFileSync('/dev/stdin')
+  .toString()
+  .trim()
+  .split(' ');
 
 (function solution1() {
   const answer = ns.match(/\d/gi);
