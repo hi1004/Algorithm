@@ -5,6 +5,6 @@ const [s, n] = require('fs')
   .split('\n');
 
 (function solution() {
-  const answer = s.slice(1, n);
+  const answer = s.replace(s[n - 1], '');
   console.log(answer);
 })();
