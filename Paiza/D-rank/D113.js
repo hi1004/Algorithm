@@ -10,7 +10,6 @@ let [h, m] = require('fs')
   const hour = h < 0 || h >= 24 ? '00' : h;
   const timeHour =
     Number(hour - 8) < 0 ? 24 + Number(hour - 8) : Number(hour - 8);
-  console.log(hour, minute);
   const answer = `${timeHour}:${Number(minute)}`;
   console.log(answer);
 })();
