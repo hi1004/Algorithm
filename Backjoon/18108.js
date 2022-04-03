@@ -1,2 +1,10 @@
-const [n] = require('fs').readFileSync('/dev/stdin', 'utf8').trim().split(' ');
-console.log(n - 544 + 1);
+const [A, B, C] = require('fs')
+  .readFileSync('/dev/stdin', 'utf8')
+  .trim()
+  .split(' ')
+  .map(Number);
+console.log(
+  `${(A + B) % C}\n${((A % C) + (B % C)) % C}\n${(A * B) % C}\n${
+    ((A % C) * (B % C)) % C
+  }`
+);
