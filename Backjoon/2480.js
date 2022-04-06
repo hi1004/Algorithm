@@ -4,6 +4,7 @@ const input = require('fs')
   .split(' ')
   .map(Number)
   .sort((a, b) => a - b);
+
 const [A, B, C] = input;
 if (A === B && B === C) {
   console.log(10000 + A * 1000);
