@@ -4,7 +4,7 @@ const input = require('fs')
   .split('\n')
   .map(Number);
 
-let multiple = input.reduce((acc, cur) => acc * cur, input[0]);
+let multiple = input[0] * input[1] * input[2];
 const arr = multiple.toString().split('');
 let result = new Array(10).fill(0);
 arr.forEach(x => {
