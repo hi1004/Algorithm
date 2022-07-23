@@ -17,6 +17,7 @@ const last = s.map(el => {
 first.shift();
 last.pop();
 const sumArr = first.concat(last);
+
 let flg = false;
 for (let i = 0; i < sumArr.length; i++) {
   if (last[i] === first[i]) {
