@@ -1,5 +1,5 @@
 const Main = input => {
-  [a, b] = Number(input);
+  const [a, b] = input;
   console.log(a - b);
 };
 
