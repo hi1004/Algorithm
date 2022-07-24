@@ -5,7 +5,8 @@ const Main = input => {
   for (let i = 1; i <= n; i++) {
     t.push(input[i]);
   }
-  console.log(Math.min.apply(null, t));
+  // console.log(Math.min.apply(null, t));
+  console.log(t.reduce((acc, cur) => Math.min(acc, cur)));
 };
 
 Main(require('fs').readFileSync('./input.txt', 'utf-8'));
