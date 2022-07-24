@@ -1,16 +1,22 @@
-const [n, ...args] = require('fs')
+const input = require('fs')
   .readFileSync('./input.txt', 'utf8')
   .trim()
   .split('\n');
 
-const s = args.map(e => {
-  return e.trim();
-});
+const n = input[0];
+const words = [];
+for (let i = 1; i <= n; i++) {
+  words.push(input[i].trim());
+}
 
-const first = s.map(el => {
+for (let i = 0; i < words.length; i++) {
+  words[i];
+}
+
+const first = words.map(el => {
   return el[0];
 });
-const last = s.map(el => {
+const last = words.map(el => {
   return el[el.length - 1];
 });
 
