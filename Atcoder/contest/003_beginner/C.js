@@ -4,15 +4,10 @@ function Main(input) {
   const numbers = input[1].split(' ').map(Number);
 
   let rate = 0;
-  numbers
-    .sort((a, b) => a - b)
-    .reverse()
-    .slice(0, n);
+  numbers.sort((a, b) => a - b).reverse();
 
   for (let i = n; i > 0; i--) {
-    if (n === numbers.length) {
-      rate = (rate + numbers[i - 1]) / 2;
-    } else if (n === 1) {
+    if (n === 1) {
       rate = (rate + Math.max.apply(null, numbers)) / 2;
     } else {
       rate = (rate + numbers[i - 1]) / 2;
