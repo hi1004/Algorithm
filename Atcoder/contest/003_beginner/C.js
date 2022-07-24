@@ -7,11 +7,7 @@ function Main(input) {
   numbers.sort((a, b) => a - b).reverse();
 
   for (let i = n; i > 0; i--) {
-    if (n === 1) {
-      rate = (rate + Math.max.apply(null, numbers)) / 2;
-    } else {
-      rate = (rate + numbers[i - 1]) / 2;
-    }
+    rate = (rate + numbers[i - 1]) / 2;
   }
   console.log(rate);
 }
