@@ -17,6 +17,17 @@ function Main(input) {
     return prev[1] > current[1] ? prev : current;
   });
   console.log(max[0]);
+
+  // let ans = 0;
+  // let max = 0;
+  // console.log(collection);
+  // for (let key in collection) {
+  //   if (max < collection[key]) {
+  //     max = collection[key];
+  //     ans = key;
+  //   }
+  // }
+  // console.log(ans);
 }
 
 Main(require('fs').readFileSync('./input.txt', 'utf-8').trim());
