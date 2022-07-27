@@ -13,9 +13,9 @@ function Main(input) {
 
   const data = Object.entries(collection);
 
-  const max = data.reduce(function (prev, current) {
-    return prev[1] > current[1] ? prev : current;
-  });
+  const max = data.reduce((prev, current) =>
+    prev[1] > current[1] ? prev : current
+  );
   console.log(max[0]);
 
   // let ans = 0;
