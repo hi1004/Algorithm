@@ -14,4 +14,4 @@ function fib(num) {
   return temp[temp.length - 1];
 }
 
-console.log(fib(n));
+console.log(fib(90));
