@@ -2,7 +2,6 @@ const Main = input => {
   const [N, ...arr] = input;
 
   arr.sort((a, b) => a - b).reverse();
-  console.log(arr);
   const result = arr.filter((item, index) => {
     return arr.indexOf(item) === index;
   });
