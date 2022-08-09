@@ -5,9 +5,7 @@ const Main = input => {
   for (let i = 1; i < N; i++) {
     cars.push(Number(input[i]));
   }
-  const result = cars
-    .filter(car => car <= M)
-    .reduce((acc, cur) => acc + cur, 0);
+  const result = cars.filter(car => car <= M).reduce((acc, cur) => acc + cur);
   console.log(result);
 };
 
