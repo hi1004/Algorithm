@@ -1,13 +1,11 @@
 const Main = input => {
-  const x = Math.floor(input / 3600);
-
+  input = Number(input);
+  const hour = Math.floor(input / (60 * 60));
   const min = Math.floor((input % 3600) / 60);
-
-  const y = Math.floor((input % 3600) % 60);
-
+  const sec = Math.floor((input % 3600) % 60);
   console.log(
-    `${x <= 9 ? `0${x}` : x}:${min <= 9 ? `0${min}` : min}:${
-      y <= 9 ? `0${y}` : y
+    `${hour <= 9 ? `0${hour}` : hour}:${min <= 9 ? `0${min}` : min}:${
+      sec <= 9 ? `0${sec}` : sec
     }`
   );
 };
