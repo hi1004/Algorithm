@@ -4,6 +4,7 @@ const Main = line => {
   const noodles = line.slice(2).map(Number);
 
   let result = 0;
+
   for (let val of noodles) {
     C * val + -B * m - A < 0 ? result++ : 0;
   }
