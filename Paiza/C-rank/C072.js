@@ -3,16 +3,8 @@ const Main = input => {
   const n = input[1];
   const table = input.slice(2).map(data => data.trim().split(' '));
 
-  const info = {};
-
   function solution(arr) {
-    // const levelUp = (userArr) => {
-    //   if (info[name][j] <= atk && atk <= info[name][j + 1]) {
-    //     console.log('atk');
-    //     isLevelUp = true;
-    //     break;
-    //   }
-    // }
+    const info = {};
     let isLevelUp = false;
     let userList = [];
     for (let i = 0; i < n; i++) {
