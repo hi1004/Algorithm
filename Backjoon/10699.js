@@ -5,6 +5,3 @@ const day = date.getDate();
 console.log(
   `${year}-${month < 10 ? `0${month}` : month}-${day < 10 ? `0${day}` : day}`
 );
-
-// const date = new Date().toISOString().split('T');
-// console.log(date[0]);
