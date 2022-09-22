@@ -9,10 +9,4 @@ const arr = words.filter((item, index) => {
   return words.indexOf(item) === index;
 });
 
-const collection = {};
-
-for (let val of arr) {
-  collection[val] = val;
-}
-
 console.log(arr.sort((a, b) => a.length - b.length).join('\n'));
