@@ -1,12 +1,13 @@
 const fs = require('fs');
 const file = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
-const line = fs.readFileSync(file).toString().trim().split('\n');
-const n = Number(line.shift());
-const words = line.map(word => word.trim());
-words.sort();
+const words = fs.readFileSync(file).toString().trim().split('\n');
 
-const arr = words.filter((item, index) => {
-  return words.indexOf(item) === index;
-});
-
-console.log(arr.sort((a, b) => a.length - b.length).join('\n'));
+const n = words.shift();
+const setWords = new Set(words);
+const getWords = [...setWords].map(n => n.trim());
+getWords.sort();
+console.log(
+  getWords
+    .sort((preWord, nextWord) => preWord.length - nextWord.length)
+    .join('\n')
+);
