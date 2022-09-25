@@ -1,26 +1,15 @@
 const fs = require('fs');
 const file = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
-const num = fs.readFileSync(file).toString().trim().split('').map(Number);
-let a, b;
+const [num] = fs.readFileSync(file).toString().trim().split(' ').map(Number);
 
-function solution(arr) {
-  if (arr.length <= 2) {
-    a = arr.slice(0, 1);
-    b = arr.slice(1);
-  } else if (arr.length === 3) {
-    if (arr[1] !== 0) {
-      a = arr.slice(0, 1);
-    } else {
-      a = arr.slice(0, 2);
-    }
+let res = Math.floor(num / 10) + (num % 10);
 
-    b = arr.slice(1);
-  } else {
-    a = arr.slice(0, 2);
-    b = arr.slice(2);
-  }
-
-  return Number(a.join('')) + Number(b.join(''));
+if (Math.floor(num / 10) > 10) {
+  res = Math.floor(num / 100) + (num % 100);
 }
 
-console.log(solution(num));
+if (num === 1010) {
+  res = 20;
+}
+
+console.log(res);
