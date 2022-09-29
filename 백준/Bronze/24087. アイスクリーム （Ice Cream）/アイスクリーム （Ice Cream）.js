@@ -7,5 +7,5 @@ const [s, a, b] = fs
   .split('\n')
   .map(Number);
 
-const ans = a <= s ? 250 + 100 * Math.ceil((s - a) / b) : 250;
+const ans = a < s ? 250 + 100 * Math.ceil((s - a) / b) : 250;
 console.log(ans);
