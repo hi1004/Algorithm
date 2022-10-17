@@ -12,7 +12,6 @@ function selectionSort1(arr) {
       const temp = arr[i];
       arr[i] = arr[lowest];
       arr[lowest] = temp;
-      isSwap = true;
     }
   }
   return arr;
