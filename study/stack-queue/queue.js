@@ -13,7 +13,7 @@ class Queue {
   }
   // push()
   enqueue(val) {
-    const newNode = new Queue(val);
+    const newNode = new Node(val);
     if (!this.first) {
       this.first = newNode;
       this.last = newNode;
@@ -28,7 +28,7 @@ class Queue {
   dequeue() {
     if (!this.first) return undefined;
     const temp = this.first;
-    if (this.length === 1) {
+    if (this.size === 1) {
       this.last = null;
     }
     this.first = this.first.next;
@@ -38,3 +38,8 @@ class Queue {
 }
 
 const queue = new Queue();
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
+
+console.log(queue);
