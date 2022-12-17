@@ -3,22 +3,16 @@ const file = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
 let [T] = fs.readFileSync(file).toString().trim().split(' ').map(Number);
 
 const [A, B, C] = [300, 60, 10];
-let [countA, countB, countC] = [0, 0, 0];
 
-while (T !== 0) {
-  if (T >= A) {
-    T -= A;
-    countA++;
-  } else if (T >= B) {
-    T -= B;
-    countB++;
-  } else {
-    T -= C;
-    countC++;
-  }
-  if (T < 0) {
-    break;
-  }
-}
-const answer = [countA, countB, countC];
-console.log(T < 0 ? -1 : answer.join(' '));
+let result = '';
+
+result += `${parseInt(T / A)} `;
+T %= A;
+result += `${parseInt(T / B)} `;
+T %= B;
+result += `${parseInt(T / C)} `;
+T %= C;
+
+result = T !== 0 ? -1 : result;
+
+console.log(result);
