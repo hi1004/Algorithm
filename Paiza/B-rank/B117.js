@@ -23,5 +23,6 @@ while (nums.length !== 1) {
     count++;
     nums.shift();
   }
+  console.log(nums);
 }
 console.log(result);
