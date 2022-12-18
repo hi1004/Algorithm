@@ -12,14 +12,12 @@ for (let val of nums) {
   results[val] = val;
 }
 
-let values = [];
 for (let i = 1; i <= N; i++) {
-  values = [];
+  let values = [];
   for (let j = 0; j < M; j++) {
     if (i % arrs[j][0] === 0) {
       values.push(arrs[j][1]);
       results[i] = values.join(' ');
-    } else {
     }
   }
 }
