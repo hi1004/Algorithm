@@ -1,6 +1,6 @@
 function solution(my_string) {
     
-    var answer =   my_string.split(' ').map(str => str.replace(/[a, e, i, o, u]/g,'')).join(' ')
+    var answer =   my_string.replace(/[aeiou]/g,'')
   
     return answer;
 }

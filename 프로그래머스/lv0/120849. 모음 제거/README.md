@@ -1,10 +1,10 @@
 # [level 0] 모음 제거 - 120849 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120849) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120849?language=javascript) 
 
 ### 성능 요약
 
-메모리: 33.4 MB, 시간: 0.19 ms
+메모리: 33.4 MB, 시간: 0.10 ms
 
 ### 구분
 
