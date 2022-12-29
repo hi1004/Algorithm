@@ -1,7 +1,5 @@
 function solution(n) {
-    var answer = Math.floor(n/7)
-    if(n%7) {
-        answer = Math.floor(n/7)+1
-    } 
+    var answer = Math.ceil(n/7)
+
     return answer;
 }
