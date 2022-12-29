@@ -1,5 +1,4 @@
 function solution(my_string, letter) {
-    const regex = new RegExp(letter,'g')
-    const answer = my_string.replace(regex, '')
+    const answer =  my_string.split(letter).join('')
     return answer;
 }
