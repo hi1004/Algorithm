@@ -34,4 +34,5 @@ if (answer > 0) {
 } else {
   dis = '';
 }
+
 console.log(dis + Math.abs(answer));
