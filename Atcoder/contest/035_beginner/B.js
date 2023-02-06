@@ -9,8 +9,8 @@ let count = 0;
 for (let i = 0; i < S.length; i++) {
   if (S[i] === 'L') pos[0]--;
   if (S[i] === 'R') pos[0]++;
-  if (S[i] === 'U') pos[1]--;
-  if (S[i] === 'D') pos[1]++;
+  if (S[i] === 'D') pos[1]--;
+  if (S[i] === 'U') pos[1]++;
   if (S[i] === '?') count++;
 }
 let ans = Math.abs(pos[0]) + Math.abs(pos[1]);
