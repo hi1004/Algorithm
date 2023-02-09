@@ -1,12 +1,10 @@
 function solution(babbling) {
-  const convertPWordsToNum = word => {
-    const pWords = ['aya', 'ye', 'woo', 'ma'];
-    return pWords.reduce((result, pWord, i) => result.replaceAll(pWord, i), word);
-  };
-  const canPronounce = word => {
-    const result = convertPWordsToNum(word);
-    return !/[^\d]/.test(result) && [...result].every((num, i) => i + 1 > result.length || num !== result[i + 1]);
-  };
+  var answer = 0;
+  const regex = /^(aya|ye|woo|ma)+$/;
 
-  return babbling.filter(b => canPronounce(b)).length;
+  babbling.forEach(word => {
+    if (regex.test(word)) answer++;
+  });
+
+  return answer;
 }
