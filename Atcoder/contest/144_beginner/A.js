@@ -1,5 +1,5 @@
 const file = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
-let [[a, b]] = require('fs')
+let [[n]] = require('fs')
   .readFileSync(file, 'utf8')
   .trim()
   .split('\n')
@@ -9,4 +9,13 @@ let [[a, b]] = require('fs')
       .split(/\s+/)
       .map(i => (isNaN(i) ? i : i - 0))
   );
-console.log(a <= 9 && b <= 9 && a * b > 0 && a * b <= 81 ? a * b : -1);
+let ans = 'No';
+for (let i = 1; i < 10; i++) {
+  for (let j = 1; j < 10; j++) {
+    if (i * j === n) {
+      ans = 'Yes';
+      break;
+    }
+  }
+}
+console.log(ans);
