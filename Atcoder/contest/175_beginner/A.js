@@ -11,5 +11,4 @@ let [[s]] = require('fs')
   );
 
 const answer = s.match(/R+/g);
-console.log(answer);
 console.log(answer ? answer[0].length : 0);
