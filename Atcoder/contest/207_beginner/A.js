@@ -10,4 +10,5 @@ let [[...a]] = require('fs')
       .map(i => (isNaN(i) ? i : i - 0))
   );
 a = a.sort((x, y) => y - x);
+
 console.log(a[0] + a[1]);
