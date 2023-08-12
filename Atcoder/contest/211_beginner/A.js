@@ -9,4 +9,10 @@ let [[a, b]] = require('fs')
       .split(/\s+/)
       .map(i => (isNaN(i) ? i : i - 0))
   );
-console.log((a - b) / 3 + b);
+if (a > 0 && b > 0) {
+  console.log('Alloy');
+} else if (0 < a && b === 0) {
+  console.log('Gold');
+} else {
+  console.log('Silver');
+}
