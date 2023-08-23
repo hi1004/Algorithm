@@ -1,5 +1,5 @@
 const file = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
-let [[str]] = require('fs')
+let [[n]] = require('fs')
   .readFileSync(file, 'utf8')
   .trim()
   .split('\n')
@@ -9,13 +9,4 @@ let [[str]] = require('fs')
       .split(/\s+/)
       .map(i => (isNaN(i) ? i : +i))
   );
-const ist = /ist$/g;
-const er = /er$/g;
-
-let ans = '';
-if (ist.test(str)) {
-  ans = 'ist';
-} else {
-  ans = 'er';
-}
-console.log(ans);
+console.log(n % 100 === 0 && n / 100 >= 1 ? 'Yes' : 'No');
