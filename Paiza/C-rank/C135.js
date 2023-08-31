@@ -9,9 +9,10 @@ let [[m, d], [p, n]] = require('fs')
       .split(/\s+/)
       .map(i => (isNaN(i) ? i : +i))
   );
+const totalNormalPrice = (n % m) * p;
+const discountPrice = (p * (100 - d)) / 100;
+
 const discountedPrice =
-  (n % m) * p + (Math.floor(n / m) * m * p * (100 - d)) / 100;
+  totalNormalPrice + Math.floor(n / m) * m * discountPrice;
 
-const result = Math.floor(discountedPrice);
-
-console.log(result);
+console.log(Math.floor(discountedPrice));
