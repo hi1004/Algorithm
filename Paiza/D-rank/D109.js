@@ -9,4 +9,5 @@ let [[m, d]] = require('fs')
       .split(/\s+/)
       .map(i => (isNaN(i) ? i : i))
   );
+
 console.log(new Set(m + d).size === 1 ? 'Yes' : 'No');
