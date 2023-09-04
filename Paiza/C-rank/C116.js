@@ -10,17 +10,18 @@ let [[n, m], [...a]] = require('fs')
       .map(i => (isNaN(i) ? i : +i))
   );
 let ans = 'OK';
-for (let i = 0; i < n - m + 1; i++) {
-  let hazure = 0;
-  for (let j = i; j < m + i; j++) {
-    if (a[j] === 0) {
-      hazure++;
-    }
-  }
 
-  if (hazure === m) {
+for (let i = 0; i < n - m + 1; i++) {
+  const subarray = a.slice(i, i + m);
+  const zeros = subarray.reduce(
+    (count, value) => count + (value === 0 ? 1 : 0),
+    0
+  );
+
+  if (zeros === m) {
     ans = 'NG';
     break;
   }
 }
+
 console.log(ans);
