@@ -18,7 +18,7 @@ let ans = [],
 
 for (let i = 1; i <= 31; i++) {
   if (aDays.includes(i) && bDays.includes(i)) {
-    !isRive ? ans.push('A') : ans.push('B');
+    ans.push(isRive ? 'B' : 'A');
     isRive = !isRive;
   } else if (aDays.includes(i)) ans.push('A');
   else if (bDays.includes(i)) ans.push('B');
