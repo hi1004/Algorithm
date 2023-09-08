@@ -1,32 +1,28 @@
-const input = require('fs')
-  .readFileSync('/dev/stdin', 'utf8')
+const file = process.platform === 'linux' ? '/dev/stdin' : './input.txt';
+let [...days] = require('fs')
+  .readFileSync(file, 'utf8')
   .trim()
   .split('\n')
-  .map(Number);
+  .map(r =>
+    r
+      .trim()
+      .split(/\s+/)
+      .map(i => (isNaN(i) ? i : +i))
+  )
+  .flat();
 
-const aDays = [];
-const bDays = [];
-let check = false;
-
-for (let i = 0; i < input[0]; i++) {
-  aDays.push(input[i + 1]);
-}
-for (let i = aDays.length + 1; i < input.length - 1; i++) {
-  bDays.push(input[i + 1]);
-}
+const aDays = days.slice(1, days[0] + 1);
+const bDays = days.slice(days[0] + 2);
+let ans = null,
+  isRive = false;
 
 for (let i = 1; i <= 31; i++) {
-  if (!check && aDays.includes(i) && bDays.includes(i)) {
-    console.log('A');
-    check = true;
-  } else if (check && aDays.includes(i) && bDays.includes(i)) {
-    console.log('B');
-    check = false;
-  } else if (aDays.includes(i)) {
-    console.log('A');
-  } else if (bDays.includes(i)) {
-    console.log('B');
-  } else {
-    console.log('x');
-  }
+  if (aDays.includes(i) && bDays.includes(i)) {
+    !isRive ? (ans = 'A') : (ans = 'B');
+    isRive = !isRive;
+  } else if (aDays.includes(i)) ans = 'A';
+  else if (bDays.includes(i)) ans = 'B';
+  else ans = 'x';
+
+  console.log(ans);
 }
