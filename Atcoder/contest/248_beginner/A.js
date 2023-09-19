@@ -7,10 +7,11 @@ let [[s]] = require('fs')
     r
       .trim()
       .split(/\s+/)
-      .map(i => (isNaN(i) ? i : +i))
+      .map(i => (isNaN(i) ? i : i))
   );
 
 const ans = Array.from({ length: 10 }, (_, i) => i)
-  .filter(v => ![...s.toString()].map(x => +x).includes(v))
+  .filter(v => ![...s].map(x => +x).includes(v))
   .join('');
+
 console.log(ans);
